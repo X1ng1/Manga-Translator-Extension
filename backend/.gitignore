@@ -1,0 +1,16 @@
+/.venv/
+/.venv-ocr/
+
+.env
+
+/models/
+
+/services/__pycache__
+
+/test-images/
+
+/__pycache__
+
+/.pytest_cache
+
+/offload_cache

@@ -1,0 +1,6 @@
+{
+    "name": "Manga Translator",
+    "description": "Translate raw mangas directly within the original layout",
+    "version": "1.0",
+    "manifest_version": 3
+}
