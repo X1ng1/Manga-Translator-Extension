@@ -25,7 +25,6 @@ def detect_bubbles(image_path: str, conf: float = 0.25) -> List[Tuple[int, int, 
             for xy in xyxys:
                 x1, y1, x2, y2 = map(int, xy[:4])
                 boxes.append((x1, y1, x2, y2))
-
     return boxes
 
 
