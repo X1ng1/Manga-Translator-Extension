@@ -27,7 +27,18 @@ def detect_bubbles(image_path: str, conf: float = 0.25) -> List[Tuple[int, int, 
                 boxes.append((x1, y1, x2, y2))
     return boxes
 
+def detect_bubbles_uploaded_image(img, conf=0.25):
+    results = model(img, conf=conf)
 
+    boxes = []
+
+    for result in results:
+        for xy in result.boxes.xyxy.tolist():
+            x1, y1, x2, y2 = map(int, xy[:4])
+            boxes.append((x1, y1, x2, y2))
+
+    return boxes
+    
 if __name__ == "__main__":
     import sys
 

@@ -1,6 +1,24 @@
 {
-    "name": "Manga Translator",
-    "description": "Translate raw mangas directly within the original layout",
-    "version": "1.0",
-    "manifest_version": 3
+  "name": "Manga Translator",
+  "version": "1.0",
+  "manifest_version": 3,
+
+  "host_permissions": [
+    "http://localhost:8000/*",
+    "https://cdn.kumacdn.club/*"
+  ],
+
+  "background": {
+    "service_worker": "background.js"
+  },
+
+  "content_scripts": [
+    {
+      "matches": [
+        "https://rawkuma.net/*"
+      ],
+      "js": ["scripts/content.js"],
+      "run_at": "document_idle"
+    }
+  ]
 }

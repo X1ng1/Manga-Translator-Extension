@@ -3,6 +3,8 @@ from root
 cd backend/services
 .venv-ocr\Scripts\activate
 uvicorn ocr_service:app --port 8001
+or
+python -m uvicorn ocr_service:app --port 8001
 
 running main app
 from root
